@@ -2,36 +2,138 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noticias</title>
-  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header>
-    <h1>Curiosidades de Tecnologia</h1>
-    <p>
-      Tudo aquilo que você sempre quis saber sobre o mundo Tech, em um único
-      lugar
-    </p>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="news.html">Notícias</a>
-    <a href="#footer-link">Contato</a>
-  </nav>
-  <main>
-    <h2> Titulo Conteudo 1</h2>
-    <p>corpo </p>
-    <h2> Titulo Conteudo 2 </h2>
-    <p>corpo </p>
-  </main>
+    <header>
+        <h1>Curiosidades de Tecnologia</h1>
+        <p>
+            Tudo aquilo que você sempre quis saber sobre o mundo Tech, em um único
+            lugar
+        </p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="news.html">Notícias</a>
+        <a href="#footer-link">Contato</a>
+    </nav>
+    <main>
+        <article>
+            <h2>Conhecer o Android Studio</h2>
+            <p class="p1">O Android Studio é o ambiente de desenvolvimento integrado (IDE) oficial para o
+                desenvolvimento de apps
+                Android. Com base no editor de código e nas ferramentas para desenvolvedores avançados do
+                <a href="https://www.jetbrains.com/idea/" target="_blank" class="externo">IntelliJ IDEA</a> , o Android
+                Studio oferece ainda mais
+                recursos para aumentar sua produtividade ao criar apps Android, como:
+            </p>
 
-  <footer id="footer-link">
-    <p>Site refeito por Bernardo Haupt em exercício do Curso em Vídeo.</p>
-  </footer>
+
+            <ul>
+                <li>um sistema de build flexível baseado em Gradle;</li>
+                <li>Um emulador rápido com inúmeros recursos</li>
+                <li>Um ambiente unificado que possibilita o desenvolvimento para todos os dispositivos Android</li>
+                <li>A Edição em tempo real para atualizar elementos combináveis em emuladores e dispositivos físicos
+                </li>
+                <li>Modelos de código e integração com GitHub para ajudar a criar recursos comuns de apps e importar
+                    exemplos de código</li>
+                <li>Frameworks e ferramentas de teste cheios de possibilidades</li>
+                <li>Ferramentas de lint para detectar problemas de desempenho, usabilidade, compatibilidade com versões,
+                    entre outros</li>
+                <li>Suporte a C++ e NDK</li>
+                <li>Compatibilidade integrada com o
+                    <a href="https://cloud.google.com/tools/android-studio/docs?hl=pt-br" target="_blank"
+                        class="externo">Google Cloud Platform
+                    </a>,
+                    facilitando a integração do Google Cloud Messaging e do App Engine.
+                </li>
+            </ul>
+
+                <div class="coluna">
+                    <img src="imagens/project-android-view.png" alt="foto">
+                    <h1> Estrutura do projeto </h1>
+                    <p class="p2">Cada projeto no Android Studio contém um ou mais módulos com arquivos de
+                        código-fonte
+                        e
+                        recursos.
+                        Os tipos de módulos incluem:</p>
+                        <ul>
+                            <li>módulos de apps Android;</li>
+                            <li>Módulos de biblioteca</li>
+                            <li>Módulos do Google App Engine</li>
+                        </ul>
+                    <p class="p2">Por padrão, o Android Studio exibe os arquivos do projeto na visualização de projetos
+                        Android,
+                        como
+                        mostrado na Figura 1. Essa visualização é organizada por módulos para permitir o acesso rápido
+                        aos
+                        principais arquivos de origem do projeto. Todos os arquivos de build podem ser observados no
+                        nível
+                        superior em <strong>Gradle Scripts</strong>. <br> <br>
+                        
+                </div>
+
+            <p>Cada módulo de app contém as seguintes pastas:</p>
+
+            <ul>
+                <li><strong>manifests</strong>: contém o arquivo AndroidManifest.xml.</li>
+                <li><strong>java</strong>: contém os arquivos de código-fonte do Kotlin e do Java, incluindo o código de
+                    teste do JUnit
+                </li>
+                <li><strong>res</strong>: contém todos os recursos que não são códigos, como strings de interface e
+                    imagens em bitmap.
+                </li>
+            </ul>
+
+            <p class="p1">A estrutura do projeto Android em disco difere dessa representação
+                simplificada. Para visualizar a estrutura de arquivos real do projeto, selecione
+                <strong>Project</strong> em vez de <strong>Android</strong> no menu <strong>Project</strong>.
+            </p>
+
+            <h1>Sistema de build do Gradle</h1>
+            <p class="p1">O Android Studio usa o Gradle como o sistema de build de base, com mais
+                recursos específicos do Android fornecidos pelo <a
+                    href="https://developer.android.com/build/releases/gradle-plugin?hl=pt-br" target="_blank">Plug-in
+                    do Android para Gradle</a>
+                . Esse sistema de build é executado como uma ferramenta integrada no
+                menu do Android Studio e de forma independente na linha de comando. Você pode usar os recursos do
+                sistema de build para fazer o seguinte:
+            </p>
+
+                <ul>
+                    <li>Personalizar, configurar e ampliar o processo de programação.</li>
+                    <li>Criar diversos APKs para seu app com diferentes recursos usando o mesmo projeto e os mesmos módulos.
+                    </li>
+                    <li>Reutilizar códigos e recursos nos conjuntos de origem.</li>
+                </ul>
+
+            <p class="p1">A flexibilidade do Gradle permite fazer tudo isso sem modificar os arquivos de
+                origem principais do seu app.
+            </p>
+
+            <p class="p1">Os arquivos de build do Android Studio são chamados de build.gradle.kts, se
+                você usa <a href="" target="_blank" class="externo">Kotlin</a> (recomendado), ou build.gradle, se usa <a
+                    href="" target="_blank" class="externo">Groovy</a>. Eles são arquivos de texto simples que usam a
+                sintaxe do
+                Kotlin ou do Groovy para configurar o build com elementos fornecidos pelo Plug-in do Android para
+                Gradle. Cada projeto tem um arquivo de build de nível superior para todo o projeto e arquivos de build
+                de módulo separados para cada módulo. Quando você importa um projeto já existente, o Android Studio gera
+                automaticamente os arquivos de build necessários.
+            </p>
+        </article>
+        <button>
+            <a href="index.html">Voltar</a>
+        </button>
+    </main>
+
+    <footer id="footer-link">
+        <p>Site refeito por Bernardo Haupt em exercício do Curso em Vídeo.</p>
+    </footer>
 </body>
 
 </html>
